@@ -1,4 +1,10 @@
-RewriteEngine on
+RewriteEngine off
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule (.*) index.php/$1 [L]
+
+<IfDefine APACHE2>
+    AcceptPathInfo on
+</IfDefine>
+
+AcceptPathInfo on

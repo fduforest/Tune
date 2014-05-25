@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteRule (.*) webroot/$1 [L]
+
+<IfDefine APACHE2>
+    AcceptPathInfo on
+</IfDefine>
+
+AcceptPathInfo on
